@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if logado %}
+        <p><a href="/profile">Voltar ao perfil</a> | <a href="/logout">Logout</a></p>
+    {% else %}
+        <p><a href="/login">Faça login para comprar</a></p>
+    {% endif %}
+</body>
+</html>
